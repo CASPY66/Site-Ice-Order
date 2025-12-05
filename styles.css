@@ -6,10 +6,10 @@ body {
     color: white;
     background-image: url('/assets/image/bg.jpg');
     background-size: cover;
-    /* чтобы фон заполнял весь блок */
-    background-position: center;
-    /* выравнивание по центру */
-    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 
