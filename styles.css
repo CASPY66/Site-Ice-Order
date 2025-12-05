@@ -1,0 +1,134 @@
+/* Общий стиль */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0bbaf5, #0c4fa6);
+    color: white;
+}
+
+
+/* Навигация */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+}
+
+.header a {
+    margin-left: 20px;
+    color: #d6f5ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.header a:hover {
+    color: white;
+}
+
+
+/* Лого */
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 10px #8edcff;
+}
+
+
+/* Главный баннер */
+
+.hero {
+    text-align: center;
+    padding: 160px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px #d6f5ff;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* Кнопка */
+
+.btn {
+    padding: 14px 32px;
+    background: #ffffff;
+    color: #0c4fa6;
+    font-size: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #8edcff;
+}
+
+
+/* Футер */
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    margin-top: 100px;
+}
+
+.items_slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 15px 0;
+    scroll-snap-type: x mandatory;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(6px);
+}
+
+.items_slider::-webkit-scrollbar {
+    height: 6px;
+}
+
+.items_slider::-webkit-scrollbar-thumb {
+    background: rgba(140, 220, 255, 0.6);
+    border-radius: 10px;
+}
+
+.slide_item {
+    min-width: 160px;
+    scroll-snap-align: start;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(180, 240, 255, 0.3);
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.slide_item.active,
+.slide_item:hover {
+    background: rgba(120, 200, 255, 0.25);
+    border-color: #8ae6ff;
+    transform: translateY(-5px);
+}
+
+.slide_item .img img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
