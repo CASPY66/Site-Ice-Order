@@ -5,21 +5,7 @@ body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #0bbaf5, #0c4fa6);
     color: white;
-}
-
-.items_box {
     background-image: url('/assets/image/bg.jpg');
-    /* путь к вашему фону */
-    background-size: cover;
-    /* чтобы фон заполнял весь блок */
-    background-position: center;
-    /* выравнивание по центру */
-    background-repeat: no-repeat;
-    /* чтобы фон не повторялся */
-    padding: 20px;
-    /* внутренние отступы, чтобы контент не прилипал к краям */
-    border-radius: 10px;
-    /* если хотите скругленные углы */
 }
 
 
