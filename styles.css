@@ -5,6 +5,11 @@ body {
     font-family: Arial, sans-serif;
     color: white;
     background-image: url('/assets/image/bg.jpg');
+    background-size: cover;
+    /* чтобы фон заполнял весь блок */
+    background-position: center;
+    /* выравнивание по центру */
+    background-repeat: no-repeat;
 }
 
 
