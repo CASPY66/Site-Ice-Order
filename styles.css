@@ -3,7 +3,6 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0bbaf5, #0c4fa6);
     color: white;
     background-image: url('/assets/image/bg.jpg');
 }
