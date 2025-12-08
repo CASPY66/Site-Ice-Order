@@ -30,7 +30,10 @@ header {
 }
 
 header .logo img {
-    height: 50px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 10px #8edcff;
 }
 
 .desktop-nav a {
