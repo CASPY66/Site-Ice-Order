@@ -1,221 +1,143 @@
-/* Общий стиль */
+/* --- Сброс стилей --- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: white;
-    background-image: url('/assets/image/bg.jpg');
-    background-size: cover;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #e0f7ff, #ffffff);
+    color: #333;
 }
 
 
-/* Навигация */
+/* --- Хедер --- */
 
-.header {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.header a {
+header .logo img {
+    height: 50px;
+}
+
+.desktop-nav a {
     margin-left: 20px;
-    color: #d6f5ff;
     text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+    color: #333;
+    font-weight: 600;
 }
 
-.header a:hover {
-    color: white;
+.desktop-nav {
+    display: flex;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    border-radius: 3px;
 }
 
 
-/* Лого */
+/* --- Мобильное меню --- */
 
-.logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 0 0 10px #8edcff;
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    left: 0;
+    padding: 10px 0;
+}
+
+.mobile-nav a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
 }
 
 
-/* Главный баннер */
+/* --- Hero Section --- */
 
 .hero {
     text-align: center;
-    padding: 160px 20px;
+    padding: 50px 20px;
+    background: url('assets/bg.png') center/cover no-repeat;
+    color: #fff;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 2.5rem;
     margin-bottom: 10px;
-    text-shadow: 0 0 15px #d6f5ff;
 }
 
 .hero p {
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 1.2rem;
 }
 
 
-/* Кнопка */
+/* --- Категории --- */
 
-.btn {
-    padding: 14px 32px;
-    background: #ffffff;
-    color: #0c4fa6;
-    font-size: 18px;
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.category {
+    margin: 10px;
+    padding: 15px 20px;
     border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
+    background: #f0f8ff;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-.btn:hover {
-    background: #8edcff;
+.category:hover,
+.category.active {
+    background: #a6e1ff;
 }
 
 
-/* Футер */
+/* --- Продукты --- */
 
-.footer {
-    text-align: center;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.05);
-    margin-top: 100px;
-}
-
-.items_slider {
-    display: flex;
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    overflow-x: auto;
-    padding: 15px 0;
-    scroll-snap-type: x mandatory;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(6px);
-}
-
-.items_slider::-webkit-scrollbar {
-    height: 6px;
-}
-
-.items_slider::-webkit-scrollbar-thumb {
-    background: rgba(140, 220, 255, 0.6);
-    border-radius: 10px;
-}
-
-.slide_item {
-    min-width: 160px;
-    scroll-snap-align: start;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(180, 240, 255, 0.3);
-    border-radius: 10px;
-    padding: 12px;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.25s;
-}
-
-.slide_item.active,
-.slide_item:hover {
-    background: rgba(120, 200, 255, 0.25);
-    border-color: #8ae6ff;
-    transform: translateY(-5px);
-}
-
-.slide_item .img img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 10px;
+    padding: 0 20px 50px 20px;
 }
 
 
-/* Фон контейнера (по мотивам FunTime) */
+/* --- Адаптация под мобильные --- */
 
-.category-selector {
-    background: linear-gradient(135deg, #1e1e2f, #2e2e4f);
-    /* можно заменить на нужные цвета */
-    padding: 20px;
-    border-radius: 15px;
-}
-
-
-/* Вкладки (по мотивам HollyWorld) */
-
-.navigation-prod .tablinks {
-    background: #333;
-    color: #fff;
-    border: none;
-    padding: 12px 20px;
-    margin: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-.navigation-prod .tablinks p {
-    margin: 0 10px 0 0;
-    font-weight: 500;
-}
-
-
-/* Иконки */
-
-.icon-prod {
-    width: 24px;
-    height: 24px;
-    background-size: cover;
-}
-
-
-/* Активная вкладка */
-
-.tablinks.active {
-    background: #ff7a59;
-    /* цвет активной вкладки */
-    color: #fff;
-    box-shadow: 0 0 10px rgba(255, 122, 89, 0.6);
-}
-
-
-/* Hover эффект */
-
-.tablinks:hover {
-    background: #555;
-}
-
-.server-selector>button.active,
-.server-selector>button:hover {
-    background: #f46700;
-    border-radius: 24px;
-    box-shadow: 0 4px 29px rgba(0, 0, 0, .05);
-    opacity: .8;
-}
-
-.server-selector>button.active {
-    border: 3px solid #fb9;
-}
-
-.server-selector>button {
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    align-items: center;
-    background: #ffe1cc;
-    border-radius: 24px;
-    cursor: pointer;
-    height: 72px;
-    margin-bottom: 10px;
-    padding: 0 10px;
-    transition: .3s;
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+    .burger {
+        display: flex;
+    }
 }

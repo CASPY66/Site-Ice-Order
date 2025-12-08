@@ -10,79 +10,59 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="logo">❄️ Ice Order</div>
-        <nav>
+    <header>
+        <div class="logo">
+            <p>❄️ Ice Order</p>
+            <img src="assets/logo.png" alt="Logo">
+        </div>
+        <nav class="desktop-nav">
             <a href="index.html">Главная</a>
             <a href="/clases/promotions/promotions.html">Акции</a>
             <a href="clases/rules/rules.html">Правила</a>
             <a href="/clases/contact/contact.html">Контакты</a>
         </nav>
-    </header>
-
-    <div class="mobile-menu">
-        <div class="container">
-            <div class="m-header">
-                <div class="logo">❄️ Ice Order</div>
-                <img class="menu_close" src="/assets/img/close.svg" alt="">
-            </div>
-            <div class="menu">
-                <a href="index.html">Главная</a>
-                <a href="/clases/promotions/promotions.html">Акции</a>
-                <a href="clases/rules/rules.html">Правила</a>
-                <a href="/clases/contact/contact.html">Контакты</a>
-            </div>
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </div>
-
-
+    </header>
+    <!-- Мобильное меню -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="index.html">Главная</a>
+        <a href="/clases/promotions/promotions.html">Акции</a>
+        <a href="clases/rules/rules.html">Правила</a>
+        <a href="/clases/contact/contact.html">Контакты</a>
+    </nav>
 
     <section class="hero">
         <h1>Добро пожаловать на Ice Order</h1>
         <p>Ледяной Minecraft PE сервер с уникальными возможностями ❄️</p>
+    </section>
 
-        <div class="responsive-main">
-            <div class="left">
-                <h4>Выберите режим</h4>
-                <div class="server-selector">
-                    <button class="tablinks active">
-                        <div class="icon-prod type-grief"></div>
-                        <p>Мини Игри</p>
-                    </button>
-                </div>
-            </div>
+    <section class="categories">
+        <div class="category tab active" data-tab="privileges">
+            <p>Привилегии</p>
         </div>
-
-        <!-- Контейнер с фоном -->
-        <div class="category-selector fade-right">
-            <div class="navigation-prod">
-                <button class="tablinks active">
-                    <p>Привилегии</p>
-                    <div class="icon-prod type-privilege"></div>
-                </button>
-                <button class="tablinks">
-                    <p>Кейс с донатом</p>
-                    <div class="icon-prod type-donate"></div>
-                </button>
-                <button class="tablinks">
-                    <p>Кейс с монетами</p>
-                    <div class="icon-prod type-currency"></div>
-                </button>
-                <button class="tablinks">
-                    <p>Кейс с титулами</p>
-                    <div class="icon-prod type-title"></div>
-                </button>
-                <button class="tablinks">
-                    <p>Рубины</p>
-                    <div class="icon-prod type-rubine"></div>
-                </button>
-                <button class="tablinks">
-                    <p>Разное</p>
-                    <div class="icon-prod type-diff"></div>
-                </button>
-            </div>
+        <div class="category tab" data-tab="cases-donate">
+            <p>Кейс с донатом</p>
         </div>
+        <div class="category tab" data-tab="cases-coins">
+            <p>Кейс с монетами</p>
+        </div>
+        <div class="category tab" data-tab="titles">
+            <p>Кейс с титулами</p>
+        </div>
+        <div class="category tab" data-tab="rubines">
+            <p>Рубины</p>
+        </div>
+        <div class="category tab" data-tab="misc">
+            <p>Разное</p>
+        </div>
+    </section>
 
+    <section class="products" id="products">
+        <!-- Карточки товаров будут сюда -->
     </section>
 
     <footer class="footer">

@@ -1,15 +1,19 @@
 console.log("Ice Order site loaded ❄️");
 
-const sliderItems = document.querySelectorAll(".slide_item");
-const infoBox = document.getElementById("item_info");
+// --- Бургер меню ---
+const burger = document.getElementById('burger');
+const mobileNav = document.getElementById('mobileNav');
 
-sliderItems.forEach(item => {
-    item.addEventListener("click", () => {
+burger.addEventListener('click', () => {
+    mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
+});
 
-        sliderItems.forEach(i => i.classList.remove("active"));
-        item.classList.add("active");
-
-        let info = item.getAttribute("data-info");
-        infoBox.innerHTML = info;
+// --- Категории ---
+const tabs = document.querySelectorAll('.tab');
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        // Тут можно фильтровать товары по категории
     });
 });
