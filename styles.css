@@ -138,47 +138,63 @@ body {
     margin-bottom: 10px;
 }
 
+
 /* Фон контейнера (по мотивам FunTime) */
+
 .category-selector {
-  background: linear-gradient(135deg, #1e1e2f, #2e2e4f); /* можно заменить на нужные цвета */
-  padding: 20px;
-  border-radius: 15px;
+    background: linear-gradient(135deg, #1e1e2f, #2e2e4f);
+    /* можно заменить на нужные цвета */
+    padding: 20px;
+    border-radius: 15px;
 }
 
+
 /* Вкладки (по мотивам HollyWorld) */
+
 .navigation-prod .tablinks {
-  background: #333;
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  margin: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  transition: all 0.3s ease;
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
 }
 
 .navigation-prod .tablinks p {
-  margin: 0 10px 0 0;
-  font-weight: 500;
+    margin: 0 10px 0 0;
+    font-weight: 500;
 }
+
 
 /* Иконки */
+
 .icon-prod {
-  width: 24px;
-  height: 24px;
-  background-size: cover;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
 }
+
 
 /* Активная вкладка */
+
 .tablinks.active {
-  background: #ff7a59; /* цвет активной вкладки */
-  color: #fff;
-  box-shadow: 0 0 10px rgba(255,122,89,0.6);
+    background: #ff7a59;
+    /* цвет активной вкладки */
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 122, 89, 0.6);
 }
 
+
 /* Hover эффект */
+
 .tablinks:hover {
-  background: #555;
+    background: #555;
+}
+
+.responsive-main {
+    left: 0;
 }
