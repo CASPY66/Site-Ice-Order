@@ -10,6 +10,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(to bottom, #e0f7ff, #ffffff);
     color: #333;
+    background-image: url(/assets/image/bg.jpg);
 }
 
 
