@@ -13,3 +13,31 @@ sliderItems.forEach(item => {
         infoBox.innerHTML = info;
     });
 });
+
+let isAdmin = false;
+
+function loginAdmin(key) {
+    const secret = 'мой_секретный_ключ'; // хранить в ENV на сервере
+    if (key === secret) {
+        isAdmin = true;
+        console.log('Вы вошли как админ!');
+    } else {
+        console.log('Неверный ключ!');
+    }
+}
+
+function setPrice(productId, newPrice) {
+    if (!isAdmin) {
+        console.log('Доступ запрещён!');
+        return;
+    }
+
+    fetch('/api/update-price', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: productId, price: newPrice })
+        })
+        .then(res => res.json())
+        .then(data => console.log('Цена обновлена', data))
+        .catch(err => console.error(err));
+}
