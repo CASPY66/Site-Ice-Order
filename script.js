@@ -22,7 +22,7 @@ tabs.forEach(tab => {
 let isAdmin = false;
 
 function loginAdmin(key) {
-    const secret = 'adm.casp'; // твой секретный ключ
+    const secret = 'casp'; // твой секретный ключ
     if (key === secret) {
         isAdmin = true;
         console.log('Вы вошли как админ!');
@@ -41,3 +41,4 @@ function setPrice(productId, newPrice) {
     console.log(`Цена товара ${productId} изменена на ${newPrice}`);
 
 }
+
