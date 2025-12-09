@@ -1,0 +1,214 @@
+/* --- Сброс стилей --- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #e0f7ff, #ffffff);
+    color: #333;
+    background-image: url(/assets/image/bg.jpg);
+}
+
+
+/* --- Хедер --- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 10px #8edcff;
+}
+
+.desktop-nav a {
+    margin-left: 20px;
+    color: #d6f5ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.desktop-nav a:hover {
+    color: white;
+}
+
+.desktop-nav {
+    display: flex;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    border-radius: 3px;
+}
+
+
+/* --- Мобильное меню --- */
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    left: 0;
+    padding: 10px 0;
+}
+
+.mobile-nav a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+
+/* --- Hero Section --- */
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('assets/bg.png') center/cover no-repeat;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+
+/* --- Категории --- */
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.category {
+    margin: 10px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background: #f0f8ff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.category:hover,
+.category.active {
+    background: #a6e1ff;
+}
+
+
+/* --- Продукты --- */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 20px 50px 20px;
+}
+
+
+/* --- Адаптация под мобильные --- */
+
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+    .burger {
+        display: flex;
+    }
+}
+
+
+/* --- Карточки товаров (FunTime стиль) --- */
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: #a6e1ff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.product-card .desc {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.product-card .price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #009de0;
+}
+
+.buy-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    background: #00baff;
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.buy-btn:hover {
+    background: #008eca;
+}
