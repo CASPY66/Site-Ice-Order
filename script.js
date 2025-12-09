@@ -41,9 +41,23 @@ function setPrice(productId, newPrice) {
     console.log(`Цена товара ${productId} изменена на ${newPrice}`);
 }
 
+// Кнопки с конкретными id
+document.getElementById('cases-donate').addEventListener('click', () => {
+    window.location.href = '/clases/category/case.html';
+});
+
+document.getElementById('priveleges').addEventListener('click', () => {
+    window.location.href = '/index.html';
+});
+
+document.getElementById('misc').addEventListener('click', () => {
+    window.location.href = '/clases/category/others.html';
+});
+
+// Все кнопки с атрибутом data-url
 document.querySelectorAll('.go-page').forEach(button => {
     button.addEventListener('click', () => {
-        const url = button.dataset.url; // Берем адрес из атрибута
-        window.location.href = url; // Переход на страницу
+        const url = button.dataset.url;
+        if (url) window.location.href = url;
     });
 });
