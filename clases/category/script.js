@@ -41,23 +41,27 @@ function setPrice(productId, newPrice) {
     console.log(`Цена товара ${productId} изменена на ${newPrice}`);
 }
 
-// Кнопки с конкретными id
-document.getElementById('cases-donate').addEventListener('click', () => {
-    window.location.href = '/clases/category/case.html';
-});
+document.addEventListener('DOMContentLoaded', () => {
+    const casesDonateBtn = document.getElementById('cases-donate');
+    const privelegesBtn = document.getElementById('priveleges');
+    const miscBtn = document.getElementById('misc');
 
-document.getElementById('priveleges').addEventListener('click', () => {
-    window.location.href = '/index.html';
-});
+    casesDonateBtn.addEventListener('click', () => {
+        window.location.href = '/clases/category/case.html';
+    });
 
-document.getElementById('misc').addEventListener('click', () => {
-    window.location.href = '/clases/category/others.html';
-});
+    privelegesBtn.addEventListener('click', () => {
+        window.location.href = '/index.html';
+    });
 
-// Все кнопки с атрибутом data-url
-document.querySelectorAll('.go-page').forEach(button => {
-    button.addEventListener('click', () => {
-        const url = button.dataset.url;
-        if (url) window.location.href = url;
+    miscBtn.addEventListener('click', () => {
+        window.location.href = '/clases/category/others.html';
+    });
+
+    document.querySelectorAll('.go-page').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            if (url) window.location.href = url;
+        });
     });
 });
