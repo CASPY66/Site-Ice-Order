@@ -212,3 +212,20 @@ header .logo img {
 .buy-btn:hover {
     background: #008eca;
 }
+
+.case {
+    border: 1px solid rgba(90,180,255,0.3);
+}
+
+.case .product-icon {
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px #5ddcff; }
+    to   { text-shadow: 0 0 15px #5ddcff; }
+}
+
+.other {
+    opacity: 0.95;
+}
