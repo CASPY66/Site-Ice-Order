@@ -19,49 +19,23 @@ tabs.forEach(tab => {
 });
 
 
-let isAdmin = false;
-
-function loginAdmin(key) {
-    const secret = 'casp'; // твой секретный ключ
-    if (key === secret) {
-        isAdmin = true;
-        console.log('Вы вошли как админ!');
-    } else {
-        console.log('Неверный ключ!');
-    }
-}
-
-function setPrice(productId, newPrice) {
-    if (!isAdmin) {
-        console.log('Доступ запрещён!');
-        return;
-    }
-
-    // здесь отправка на сервер, пока просто вывод в консоль
-    console.log(`Цена товара ${productId} изменена на ${newPrice}`);
-}
 
 document.addEventListener('DOMContentLoaded', () => {
-    const casesDonateBtn = document.getElementById('cases-don');
-    const privelegesBtn = document.getElementById('prefix');
-    const miscBtn = document.getElementById('misc');
 
-    casesDonateBtn.addEventListener('click', () => {
-        window.location.href = '/clases/category/case.html';
-    });
+    const buttons = document.querySelectorAll('.tab-btn');
+    const contents = document.querySelectorAll('.tab-content');
 
-    privelegesBtn.addEventListener('click', () => {
-        window.location.href = '/index.html';
-    });
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
 
-    miscBtn.addEventListener('click', () => {
-        window.location.href = '/clases/category/others.html';
-    });
+            // убираем active у всех
+            buttons.forEach(b => b.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
 
-    document.querySelectorAll('.go-page').forEach(button => {
-        button.addEventListener('click', () => {
-            const url = button.dataset.url;
-            if (url) window.location.href = url;
+            // добавляем active нужным
+            btn.classList.add('active');
+            document.getElementById(btn.dataset.tab).classList.add('active');
         });
     });
+
 });
