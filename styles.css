@@ -36,6 +36,10 @@ header .logo img {
     text-shadow: 0 0 10px #8edcff;
 }
 
+header .logo p {
+    color: #00ffd5ff;
+}
+
 .desktop-nav a {
     margin-left: 20px;
     color: #d6f5ff;
