@@ -42,8 +42,8 @@ function setPrice(productId, newPrice) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const casesDonateBtn = document.getElementById('cases-donate');
-    const privelegesBtn = document.getElementById('priveleges');
+    const casesDonateBtn = document.getElementById('cases-don');
+    const privelegesBtn = document.getElementById('prefix');
     const miscBtn = document.getElementById('misc');
 
     casesDonateBtn.addEventListener('click', () => {
