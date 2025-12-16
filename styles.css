@@ -37,25 +37,26 @@ header .logo img {
 }
 
 header .logo p {
-    color: #90fceaff;
+    color: #91f3e3ff;
 }
 
 .desktop-nav a {
     margin-left: 20px;
-    color: #2b5563ff;
+    color: #d6f5ff;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
 }
 
 .desktop-nav a:hover {
-    color: rgba(43, 76, 82, 1);
-
+    color: white;
 }
 
 .desktop-nav {
     display: flex;
 }
+
+
 
 .burger {
     display: none;
@@ -77,7 +78,7 @@ header .logo p {
 .mobile-nav {
     display: none;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(182, 248, 243, 0.95);
     position: absolute;
     top: 70px;
     width: 100%;
@@ -88,8 +89,17 @@ header .logo p {
 .mobile-nav a {
     padding: 10px 20px;
     text-decoration: none;
-    color: #333;
+    color: #fcfcfcff;
     font-weight: 600;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
