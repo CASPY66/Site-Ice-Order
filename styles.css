@@ -76,7 +76,7 @@ header .logo p {
 .mobile-nav {
     display: none;
     flex-direction: column;
-    background: rgba(55, 99, 95, 0.95);
+    background: rgba(182, 235, 230, 0.95);
     position: absolute;
     top: 70px;
     width: 100%;
@@ -87,7 +87,7 @@ header .logo p {
 .mobile-nav a {
     padding: 10px 20px;
     text-decoration: none;
-    color: #333;
+    color: #000000ff;
     font-weight: 600;
 }
 
