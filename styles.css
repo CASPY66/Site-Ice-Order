@@ -56,8 +56,6 @@ header .logo p {
     display: flex;
 }
 
-
-
 .burger {
     display: none;
     flex-direction: column;
@@ -78,7 +76,7 @@ header .logo p {
 .mobile-nav {
     display: none;
     flex-direction: column;
-    background: rgba(182, 248, 243, 0.95);
+    background: rgba(55, 99, 95, 0.95);
     position: absolute;
     top: 70px;
     width: 100%;
@@ -89,17 +87,8 @@ header .logo p {
 .mobile-nav a {
     padding: 10px 20px;
     text-decoration: none;
-    color: #fcfcfcff;
+    color: #333;
     font-weight: 600;
-}
-
-.menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
 }
 
 
