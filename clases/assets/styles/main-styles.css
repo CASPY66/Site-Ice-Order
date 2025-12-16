@@ -134,17 +134,6 @@ header .logo p {
     background: #a6e1ff;
 }
 
-
-/* --- Продукты --- */
-
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 0 20px 50px 20px;
-}
-
-
 /* --- Адаптация под мобильные --- */
 
 @media (max-width: 768px) {
@@ -154,82 +143,4 @@ header .logo p {
     .burger {
         display: flex;
     }
-}
-
-
-/* --- Карточки товаров (FunTime стиль) --- */
-
-.product-card {
-    background: white;
-    border-radius: 15px;
-    padding: 20px;
-    text-align: center;
-    transition: 0.3s;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    border: 2px solid transparent;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-    border-color: #a6e1ff;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-}
-
-.product-card img {
-    width: 110px;
-    height: 110px;
-    object-fit: contain;
-    margin-bottom: 15px;
-}
-
-.product-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-.product-card .desc {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 15px;
-}
-
-.product-card .price {
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #009de0;
-}
-
-.buy-btn {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    background: #00baff;
-    color: white;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    transition: 0.25s;
-}
-
-.buy-btn:hover {
-    background: #008eca;
-}
-
-.case {
-    border: 1px solid rgba(90,180,255,0.3);
-}
-
-.case .product-icon {
-    animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-    from { text-shadow: 0 0 5px #5ddcff; }
-    to   { text-shadow: 0 0 15px #5ddcff; }
-}
-
-.other {
-    opacity: 0.95;
 }
