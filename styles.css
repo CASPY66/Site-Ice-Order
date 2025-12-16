@@ -49,7 +49,7 @@ header .logo p {
 }
 
 .desktop-nav a:hover {
-    color: white;
+    color: rgba(43, 76, 82, 1);
 }
 
 .desktop-nav {
